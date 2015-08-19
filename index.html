@@ -7,13 +7,44 @@
 </head>
 <body ng-controller="TestController">
 
-<input type="text" ng-model="newPlace" placeholder="Restaurant">
-<button ng-click="addPlace()">Add Place</button>
 
-<p>{{data}}</p>
+<div class="ui one column stackable center aligned page grid">
+   <div class="column twelve wide ui segment">
+       <h1 class="ui header"> 
+       	Fist to Five
+  <div class="sub header">Check for Student Understanding</div>
+</h1>
+	  	<canvas id="doughnut" class="chart chart-doughnut" data="data" labels="labels"></canvas> 
 
-<canvas id="doughnut" class="chart chart-doughnut" data="data"
-  labels="labels"></canvas> 
+	  <div class="ui segment"><button class="ui button" ng-click="addPlace(0)">Vote 1</button>
+			<button class="ui button" ng-click="addPlace(1)">Vote 2</button>
+			<button class="ui button" ng-click="addPlace(2)">Vote 3</button>
+			<button class="ui button" ng-click="addPlace(3)">Vote 4</button>
+			<button class="ui button" ng-click="addPlace(4)">Vote 5</button>
+			<button class="ui primary button" ng-click="reset()">RESET</button></div>
+	  	
+   </div>
+</div>
+
+
+<!--   <div class="ui grid">
+  	<div class="four wide column"></div>
+  	<div class="eight wide column">
+	  	<h1 class="ui center aligned header">Fist to Five App</h1>
+	  	<canvas id="doughnut" class="chart chart-doughnut" data="data" labels="labels"></canvas> 
+
+	  	<div class="center aligned header">
+	  		<button class="ui button" ng-click="addPlace(0)">Vote 1</button>
+			<button class="ui button" ng-click="addPlace(1)">Vote 2</button>
+			<button class="ui button" ng-click="addPlace(2)">Vote 3</button>
+			<button class="ui button" ng-click="addPlace(3)">Vote 4</button>
+			<button class="ui button" ng-click="addPlace(4)">Vote 5</button>
+			<button class="ui primary button" ng-click="reset()">RESET</button>
+	  	</div>
+			
+		</div>
+  	<div class="four wide column"></div>
+  </div> -->
 
   <!-- <div class="ui grid">
 	<div class="four wide column"></div>
