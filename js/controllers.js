@@ -1,7 +1,7 @@
 app.controller('TestController', function($scope, $firebaseArray){
 	var root = new Firebase("https://gschooldemo.firebaseio.com");
 	var scoresRef = new Firebase("https://gschooldemo.firebaseio.com/test/-Jx3_ObiBa1KhP9FgfSG/data");
-		Chart.defaults.global.colours = ["#e74c3c", "#e67e22", "#f1c40f", "#27ae60","#2ecc71", "#c0392b", "#c0392b"]
+		Chart.defaults.global.colours = ["#e74c3c", "#e67e22", "#f1c40f", "#2ecc71", "#27ae60","#c0392b", "#c0392b"]
 
 		
 
