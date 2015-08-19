@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>AngularFire Demo</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css">
+</head>
+<body ng-controller="TestController">
+
+<div class="ui grid">
+	<div class="four wide column"></div>
+	<div class="eight wide column">
+		<div class="ui segment">
+		<div class="ui comments">
+		  <h3 class="ui dividing header">AngularFire Chat</h3>
+		  <div class="comment" ng-repeat="msg in messages">
+		    <a class="avatar">
+		      <img ng-src="{{msg.img}}">
+		    </a>
+		    <div class="content">
+		      <a class="author">{{msg.user}}</a>
+		      <div class="metadata">
+		        <span class="date">{{msg.date}}</span>
+		      </div>
+		      <div class="text">
+		        {{msg.text}}
+		      </div>
+		      <div class="actions">
+		        <a ng-click="remove(msg)" class="reply">Delete</a>
+		      </div>
+		    </div>
+		  </div>
+		  </div>
+
+
+		  <form class="ui form">
+  <div class="field">
+    <label>User Name</label>
+    <input type="text" ng-model="user" placeholder="username">
+  </div>
+  <div class="field">
+    <label>Avatar Url</label>
+    <input type="text" ng-model="img" placeholder="imageUrl">
+  </div>
+   <div class="field">
+    <label>Message</label>
+    <input type="text" ng-model="message" placeholder="message">
+  </div>
+  <button ng-click="sendMessage()" class="ui button" type="submit">Submit</button>
+	</form>
+		</div>
+	</div>
+	<div class="four wide column"></div>
+</div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+
+</body>
+</html>
