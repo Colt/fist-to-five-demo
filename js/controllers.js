@@ -1,21 +1,16 @@
 app.controller('TestController', function($scope, $firebaseArray){
-	// var root = new Firebase("https://gschooldemo.firebaseio.com");
-	var messagesRef = new Firebase("https://gschooldemo.firebaseio.com/messages");
+	var root = new Firebase("https://gschooldemo.firebaseio.com");
+	var placesRef = new Firebase("https://gschooldemo.firebaseio.com/places");
 
-	$scope.messages = $firebaseArray(messagesRef);
+	$scope.places = $firebaseArray(placesRef);
 
-	$scope.sendMessage = function(){
-		var newMsg = {
-			user: $scope.user,
-			text: $scope.message,
-			date: new Date(),
-			img: $scope.img
+	$scope.addPlace = function(){
+		var newPlace = {
+			name: $scope.newPlace
 		}
 
-		console.log(newMsg)
-
-		$scope.messages.$add(newMsg);
-		$scope.message = "";
+		$scope.places.$add(newMsg);
+		$scope.newPlace = "";
 	}
 
 	$scope.remove = function(msg){
