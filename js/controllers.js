@@ -16,11 +16,11 @@ app.controller('VotesController', function($scope, $firebaseArray){
 
 	$scope.reset = function(){
 		//obviously need to refactor this
-		$scope.responses[0].$value = 1;
-		$scope.responses[1].$value = 1;
-		$scope.responses[2].$value = 1;
-		$scope.responses[3].$value = 1;
-		$scope.responses[4].$value = 1;
+		$scope.responses[0].$value = 0;
+		$scope.responses[1].$value = 0;
+		$scope.responses[2].$value = 0;
+		$scope.responses[3].$value = 0;
+		$scope.responses[4].$value = 0;
 		$scope.responses.$save(0)
 		$scope.responses.$save(1)
 		$scope.responses.$save(2)
