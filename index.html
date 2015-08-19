@@ -1,100 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-	<title>AngularFire Demo</title>
+	<title>Fist To Five Firebase</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="angular-chart.css">
 </head>
-<body ng-controller="TestController">
+<body ng-controller="VotesController">
 
 
 <div class="ui one column stackable center aligned page grid">
-   <div class="column twelve wide ui segment">
-       <h1 class="ui header"> 
-       	Fist to Five
-  <div class="sub header">Check for Student Understanding</div>
-</h1>
-	  	<canvas id="doughnut" class="chart chart-doughnut" data="data" labels="labels"></canvas> 
-
-	  <div class="ui segment"><button class="ui button" ng-click="addPlace(0)">Vote 1</button>
-			<button class="ui button" ng-click="addPlace(1)">Vote 2</button>
-			<button class="ui button" ng-click="addPlace(2)">Vote 3</button>
-			<button class="ui button" ng-click="addPlace(3)">Vote 4</button>
-			<button class="ui button" ng-click="addPlace(4)">Vote 5</button>
-			<button class="ui primary button" ng-click="reset()">RESET</button></div>
-	  	
+  <div class="column twelve wide ui segment">
+  	<h1 class="ui header"> 
+    	Fist to Five
+  		<div class="sub header">Check for Student Understanding</div>
+		</h1>
+	  <canvas id="doughnut" class="chart chart-doughnut" data="data" labels="labels"></canvas> 
+	  <div class="ui segment">
+	  	<button class="ui button" ng-click="vote(0)">Vote 1</button>
+			<button class="ui button" ng-click="vote(1)">Vote 2</button>
+			<button class="ui button" ng-click="vote(2)">Vote 3</button>
+			<button class="ui button" ng-click="vote(3)">Vote 4</button>
+			<button class="ui button" ng-click="vote(4)">Vote 5</button>
+			<button class="ui primary button" ng-click="reset()">RESET</button>
+		</div>
    </div>
 </div>
-
-
-<!--   <div class="ui grid">
-  	<div class="four wide column"></div>
-  	<div class="eight wide column">
-	  	<h1 class="ui center aligned header">Fist to Five App</h1>
-	  	<canvas id="doughnut" class="chart chart-doughnut" data="data" labels="labels"></canvas> 
-
-	  	<div class="center aligned header">
-	  		<button class="ui button" ng-click="addPlace(0)">Vote 1</button>
-			<button class="ui button" ng-click="addPlace(1)">Vote 2</button>
-			<button class="ui button" ng-click="addPlace(2)">Vote 3</button>
-			<button class="ui button" ng-click="addPlace(3)">Vote 4</button>
-			<button class="ui button" ng-click="addPlace(4)">Vote 5</button>
-			<button class="ui primary button" ng-click="reset()">RESET</button>
-	  	</div>
-			
-		</div>
-  	<div class="four wide column"></div>
-  </div> -->
-
-  <!-- <div class="ui grid">
-	<div class="four wide column"></div>
-	<div class="eight wide column">
-		<div class="ui segment">
-		<div class="ui comments">
-		  <h3 class="ui dividing header">AngularFire Chat</h3>
-		  <div class="comment" ng-repeat="msg in messages">
-		    <a class="avatar">
-		      <img ng-src="{{msg.img}}">
-		    </a>
-		    <div class="content">
-		      <a class="author">{{msg.user}}</a>
-		      <div class="metadata">
-		        <span class="date">{{msg.date}}</span>
-		      </div>
-		      <div class="text">
-		        {{msg.text}}
-		      </div>
-		      <div class="actions">
-		        <a ng-click="remove(msg)" class="reply">Delete</a>
-		      </div>
-		    </div>
-		  </div>
-		  </div>
-
-
-		  <form class="ui form">
-  <div class="field">
-    <label>User Name</label>
-    <input type="text" ng-model="user" placeholder="username">
-  </div>
-  <div class="field">
-    <label>Avatar Url</label>
-    <input type="text" ng-model="img" placeholder="imageUrl">
-  </div>
-   <div class="field">
-    <label>Message</label>
-    <input type="text" ng-model="message" placeholder="message">
-  </div>
-  <button ng-click="sendMessage()" class="ui button" type="submit">Submit</button>
-	</form>
-		</div>
-	</div>
-	<div class="four wide column"></div>
-</div>
-
- -->
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.min.js"></script>
