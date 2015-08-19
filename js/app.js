@@ -1,1 +1,1 @@
-var app = angular.module("myApp", ['firebase'])
+var app = angular.module("myApp", ['firebase', 'chart.js'])
